@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.config-chain.config-chain">
+            function <span class="apidocSignatureSpan"></span>config-chain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.config-chain.ConfigChain">
             function <span class="apidocSignatureSpan">config-chain.</span>ConfigChain
             <span class="apidocSignatureSpan">()</span>
@@ -366,6 +375,32 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.config-chain" id="apidoc.module.config-chain">module config-chain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.config-chain.config-chain" id="apidoc.element.config-chain.config-chain">
+        function <span class="apidocSignatureSpan"></span>config-chain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">config-chain = function () {
+  var args = [].slice.call(arguments)
+    , conf = new ConfigChain()
+
+  while(args.length) {
+    var a = args.shift()
+    if(a) conf.push
+          ( &#x27;string&#x27; === typeof a
+            ? json(a)
+            : a )
+  }
+
+  return conf
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
